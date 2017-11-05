@@ -1,4 +1,4 @@
-/*
+	/*
 	Author: code34 nicolas_boiteux@yahoo.fr
 	Copyright (C) 2016-2018 Nicolas BOITEUX
 
@@ -26,6 +26,7 @@
 		PRIVATE VARIABLE("array","defausse");
 
 		PUBLIC FUNCTION("array","constructor") { 
+			DEBUG(#, "OO_POKER::constructor")
 			private _cards = [[14, "T"], [14, "C"],[14, "K"],[14, "P"],[13, "T"], [13, "C"],[13, "K"],[13, "P"],[12, "T"], [12, "C"],[12, "K"],[12, "P"],[11, "T"], [11, "C"],[11, "K"],[11, "P"],[10, "T"], [10, "C"],[10, "K"],[10, "P"],[9, "T"], [9, "C"],[9, "K"],[9, "P"],[8, "T"], [8, "C"],[8, "K"],[8, "P"],[7, "T"], [7, "C"],[7, "K"],[7, "P"],[6, "T"], [6, "C"],[6, "K"],[6, "P"],[5, "T"], [5, "C"],[5, "K"],[5, "P"],[4, "T"], [4, "C"],[4, "K"],[4, "P"],[3, "T"], [3, "C"],[3, "K"],[3, "P"],[2, "T"], [2, "C"],[2, "K"],[2, "P"]];
 			MEMBER("defausse", []);
 			MEMBER("cards", _cards);
@@ -33,6 +34,7 @@
 		};
 
 		PUBLIC FUNCTION("","distributeCards") {
+			DEBUG(#, "OO_POKER::distributeCards")
 			private _hand = [];
 			private _card = [];
 			private _score = [];
@@ -53,6 +55,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkScore") {
+			DEBUG(#, "OO_POKER::checkScore")
 			private _max = -1;
 			private _hauteur = -1;
 			private _winner = "";
@@ -82,6 +85,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkQuinteFlushRoyal") {
+			DEBUG(#, "OO_POKER::checkQuinteFlushRoyal")
 			private _index = 0;
 			private _combinaison = [14, 13,12,11,10];
 			private _result = false;
@@ -94,6 +98,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkQuinteFlush") {
+			DEBUG(#, "OO_POKER::checkQuinteFlush")
 			private _index = 0;
 			private _combinaison = [];
 			private _result = false;
@@ -105,6 +110,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkCarre") {
+			DEBUG(#, "OO_POKER::checkCarre")
 			private _result = false;
 			private _combinaison = [];
 			private _index = 0;
@@ -122,6 +128,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkFull") {
+			DEBUG(#, "OO_POKER::checkFull")
 			private _result = false;
 			private _combinaison = [];
 			private _index = 0;
@@ -140,6 +147,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkFlush") {
+			DEBUG(#, "OO_POKER::checkFlush")
 			private _result = false;
 			private _combinaison = [];
 			{
@@ -150,6 +158,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkQuinte") {
+			DEBUG(#, "OO_POKER::checkQuinte")
 			private _index = 0;
 			private _combinaison = [];
 			private _result = false;
@@ -170,6 +179,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkBrelan") {
+			DEBUG(#, "OO_POKER::checkBrelan")
 			private _index = 0;
 			private _result = false;
 			private _combinaison = [];
@@ -188,6 +198,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkDoublePair") {
+			DEBUG(#, "OO_POKER::checkDoublePair")
 			private _result = false;
 			private _combinaison = [];
 			private _index = 0;
@@ -205,6 +216,7 @@
 		};		
 
 		PUBLIC FUNCTION("array","checkPair") {
+			DEBUG(#, "OO_POKER::checkPair")
 			private _result = false;
 			private _combinaison = [];
 			private _index = 0;
@@ -223,6 +235,7 @@
 		};
 
 		PUBLIC FUNCTION("array","checkHauteur") {
+			DEBUG(#, "OO_POKER::checkHauteur")
 			private _combinaison = [];
 
 			// sort all card
@@ -236,6 +249,7 @@
 
 
 		PUBLIC FUNCTION("array","checkCards") {
+			DEBUG(#, "OO_POKER::checkCards")
 			private _hand = _this;
 			private _combinaison = [];
 			private _combinaison2 = [];
@@ -266,6 +280,7 @@
 		};
 	
 		PUBLIC FUNCTION("","deconstructor") { 
+			DEBUG(#, "OO_POKER::deconstructor")
 			DELETE_VARIABLE("cards");
 			DELETE_VARIABLE("players");
 		};
